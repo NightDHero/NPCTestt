@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NPC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body> 
+  <section class="container">
+
+    <div class="settings-icon-container">
+      <img id="settings-icon" src="Images/OIP-removebg-preview.png" alt="Failed to load image" draggable="false">
+      <img id="save-icon" src="Images/OIP__1_-removebg-preview.png" alt="Failed to load image" draggable="false"> 
+    </div>
+
+    <div class="save-menu hidden">
+      <div class="new-save">New Save</div>
+      <div class="new-save-options hidden">
+        <textarea id="save-name" placeholder="Item Name"></textarea>
+      </div>
+      <div class="vertical-line"></div>
+      <div class="save-box"></div>
+    </div>
+
+    <div id="settings-menu" class="hidden">
+      <div class="one main">Result Preview (Adjustable)</div>
+      <div class="preview hidden">
+        <div class="draggable text" data-order="0">
+          <label class="switch">
+            <input type="checkbox" class="toggle-display" checked>
+            <span class="slider"></span>
+          </label>
+          Profit / Hour:
+          <button class="move-up">⇧</button>
+          <button class="move-down">⇩</button>
+        </div>
+        <div class="draggable text" data-order="1">
+          <label class="switch">
+            <input type="checkbox" class="toggle-display" checked>
+            <span class="slider"></span>
+          </label>
+          Profit / Day:
+          <button class="move-up">⇧</button>
+          <button class="move-down">⇩</button>
+        </div>
+        <div class="draggable text" data-order="2">
+          <label class="switch">
+            <input type="checkbox" class="toggle-display" checked />
+            <span class="slider"></span>
+          </label>
+          Profit / Minute:
+          <button class="move-up">⇧</button>
+          <button class="move-down">⇩</button>
+        </div>
+        <div class="draggable text" data-order="3">
+          <label class="switch">
+            <input type="checkbox" class="toggle-display" checked />
+            <span class="slider"></span>
+          </label>
+          Profit / Inventory:
+          <button class="move-up">⇧</button>
+          <button class="move-down">⇩</button>
+        </div>
+        <div class="draggable text" data-order="4">
+          <label class="switch">
+            <input type="checkbox" class="toggle-display" checked />
+            <span class="slider"></span>
+          </label>
+          Time Needed:
+          <button class="move-up">⇧</button>
+          <button class="move-down">⇩</button>
+        </div>
+        <div class="draggable text" data-order="5">
+          <label class="switch">
+            <input type="checkbox" class="toggle-display" checked />
+            <span class="slider"></span>
+          </label>
+          Coins Required / Day:
+          <button class="move-up">⇧</button>
+          <button class="move-down">⇩</button>
+        </div>
+        <div class="draggable text" data-order="6">
+          <label class="switch">
+            <input type="checkbox" class="toggle-display" checked />
+            <span class="slider"></span>
+          </label>
+          Buy Order Size:
+          <button class="move-up">⇧</button>
+          <button class="move-down">⇩</button>
+        </div>
+      </div>
+      <div class="two main">2</div>
+      <div class="three main">        
+        Inventory Dumptime
+        <div class="Inventory-dumptime-container hidden">
+
+        </div>
+      </div>
+      <div class="four main">4</div>
+      <div class="five main">5</div>
+      <div class="six main">6</div>
+    </div>
+
+    <h1>BZ --> NPC flipper</h1>
+
+    <label for="bz-buy-price">Bazaar Buy Price</label>
+    <input type="number" id="bz-buy-price" placeholder="Buy Price" tabindex="1"/>
+
+    <label for="npc-sell-price">NPC Sell Price</label>
+    <input type="number" id="npc-sell-price" placeholder="Sell Price" tabindex="2"/>
+
+    <button class="calculate" tabindex="3">Calculate</button>
+    <button class="reset" tabindex="4">Reset</button>
+
+
+
+    
+    <footer>
+      <div id="result" class="hidden">
+        <div class="result-item" data-order="0"></div>
+        <div class="result-item" data-order="1"></div>
+        <div class="result-item" data-order="2"></div>
+        <div class="result-item" data-order="3"></div>
+        <div class="result-item" data-order="4"></div>
+        <div class="result-item" data-order="5"></div>
+        <div class="result-item" data-order="6"></div>
+      </div>
+    </footer>
+  </section>
+  <script src="calculation&preview.js"></script>
+  <script src="save.js"></script>
+</body>
+</html>
