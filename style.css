@@ -26,9 +26,9 @@ body {
     position: relative;
 
     height: 350px;
-    width: 500px;
+    width: 85vw;
     max-width: 600px;
-    min-width: 400px;
+    min-width: 305px;
     padding: 0 20px 20px;
 
     background-color: rgb(110, 109, 109);
@@ -64,6 +64,7 @@ body {
     border-radius: 8px;
     cursor: crosshair;
     width: 75%;
+    max-width: 300px;
 }
 
 .reset {
@@ -186,6 +187,8 @@ body {
     justify-content: center;
     align-items: center;
 
+
+
     margin: 10px;
     
     background: linear-gradient(to right, rgb(79, 42, 165), rgb(145, 5, 63));
@@ -208,17 +211,20 @@ body {
     top: 100%;
     left: 0;
     right: 0;
-    height: 355px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: flex-start;
-    padding: 30px;
+    align-items: stretch;
+
+    height: auto;
+    max-height: 355px;
+
     background-color: rgb(110, 109, 109);
 
     border: 3px solid black;
     border-radius: 10px;
+    padding: 10px;
 }
 
 
@@ -227,6 +233,7 @@ body {
     z-index: 5;
     position: relative;
     cursor: default;
+    font-size: 4vw;
 }
 
 .preview.hidden {
@@ -264,23 +271,17 @@ body {
     rotate: 10deg;
 }
 
-#arrow {
-    position: absolute;
-    top: -15px;
-    left: -60px;
-    rotate: 210deg;
 
-    width: 55px;
-    height: 35px;
-}
 
 .switch {
     position: absolute;
-    top: 18px;
-    right: -70px;
+    top: 7px;
+    right: -45px;
+
     width: 40px;
     height: 20px;
 
+    
 }
 
 .switch input {
@@ -322,12 +323,10 @@ input:checked + .slider:before {
 }
 
 
-#result.hidden {
-    display: none;
-}
 
 .move-up, .move-down{
-    font-size: 30px;
+    position: relative;
+    font-size: 4.5vw;
     background: transparent;
     border: none;
     color: blue;
@@ -335,6 +334,9 @@ input:checked + .slider:before {
 }
 
 
+#result.hidden {
+    display: none;
+}
 /* .sidebar {
     position: absolute;
     top: -10px;
@@ -358,28 +360,49 @@ input:checked + .slider:before {
     width: 40px;
 }
 
+
+
+
+
+
+
+
 .save-menu {
     position: absolute;
+    top: 355px;
     
+    display: flex;
+    flex-direction: row;
+    
+    /* height: 350px;
+    width: 55vw;
+    max-width: 600px;
+    min-width: 305px; */
 
+    height: 350px;
+    width: 85vw;
+    max-width: 600px;
+    min-width: 305px;
 
-    width: 450px;
-    height: 310px;
     background-color: rgb(68, 65, 95);
+
 }
 
-.new-save {
+/* .new-save {
     position: absolute;
     top: 0px;
-    left: 0px;
-    
+    left: 50%;
+    transform: translateX(-50%);
+
+
     margin: 10px;
-    padding-right: 10px;
+    padding: 5px;
     padding-bottom: 12px;
 
-    border-right: 4px solid black;
-    border-bottom: 4px solid black;
-}
+    font-size: 20px;
+    
+    border: 3px dotted black;
+} */
 
 .new-save-options {
     position: absolute;
@@ -394,28 +417,24 @@ input:checked + .slider:before {
 }
 
 
-.vertical-line {
-    position: absolute;
-    top: 10px;
-    left: 160px;
-
-    height: 290px;
-
-    border-left: 3px solid black;
-}
-
-
 .save-box {
     position: absolute;
-    top: 10px;
-    left: 170px;
-    width: 270px;
-    height: 290px;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 95%;
+    max-width: 600px;
+    min-width: 305px;
+    height: 270px;
     overflow-y: auto;
-    background-color: #f0f0f0;
+
     padding: 10px;
-    border-left: 3px solid black;
+
     color: blue;
+    background-color: #f0f0f0;
+
+    border-left: 3px solid black;
 }
 
 
@@ -426,10 +445,6 @@ input:checked + .slider:before {
     padding-top: 11px;
     resize: none;
 }
-
-
-
-
 
 .hidden {
     display: none;
